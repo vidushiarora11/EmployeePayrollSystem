@@ -23,6 +23,7 @@ This project was developed as a **training/college project** to demonstrate:
 
 ## ✨ Features
 - GUI-based application using Java Swing
+- Admin Login
 - Add and manage employee details
 - Salary calculation logic
 - Generate salary slips as PDF files
@@ -41,21 +42,7 @@ This project was developed as a **training/college project** to demonstrate:
 ---
 
 ## 📂 Project Structure
-EmployeePayrollSystem/
-│
-├── src/ # All Java source code
-│ ├── ui/ # GUI-related classes
-│ ├── dao/ # Database access classes
-│ └── main/ # Main application entry point
-│
-├── lib/ # External JAR files (PDF library, etc.)
-│
-├── output/ # Generated salary slip PDFs
-│
-├── .vscode/ # VS Code configuration (optional)
-│
-└── README.md # Project documentation
-
+<img width="601" height="1264" alt="image" src="https://github.com/user-attachments/assets/16990af6-b4a9-4e6e-8440-87fa9b5951a8" />
 
 ---
 
@@ -95,6 +82,12 @@ Make sure the following are installed on your system:
     ->     month VARCHAR(20) NOT NULL,
     ->     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     ->     FOREIGN KEY (emp_id) REFERENCES employee(emp_id)
+    -> );
+
+    CREATE TABLE users (
+    ->     id INT AUTO_INCREMENT PRIMARY KEY,
+    ->     userid VARCHAR(50) UNIQUE NOT NULL,
+    ->     password VARCHAR(255) NOT NULL
     -> );
 5. Update database credentials (username, password) inside the database connection file- DBConnection.java in util folder.
 
